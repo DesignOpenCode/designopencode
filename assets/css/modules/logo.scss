@@ -1,0 +1,59 @@
+.logo {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  svg {
+    overflow: visible;
+  }
+
+  &--red {
+    fill: $color-6;
+  }
+
+  &--navy {
+    fill: $color-3;
+  }
+
+  &--navy-stroke {
+    fill: none;
+    stroke: $color-3;
+    stroke-width: 102;
+    stroke-miterlimit: 10;
+    display: none;
+  }
+
+  &__circle {
+    fill: $color-3;
+    transform: rotate(0deg);
+    transform-origin: center center;
+    animation: circleRotate 8s ease-out infinite;
+  }
+
+  &__dot {
+    fill: $color-6;
+    transform: translateY(0);
+    animation: logoDot 8s ease-in infinite;
+  }
+}
+
+@keyframes logoDot {
+  0% { fill: $color-6;transform: translateY(0);}
+  5% { fill: $color-5;transform: translateY(-1.5em);}
+  10% { fill: $color-5;transform: translateY(0.3em);}
+  12% { fill: $color-5;transform: translateY(0em);}
+  22% { fill: $color-5;transform: translateY(0em);}
+  25% { fill: $color-5;transform: translateY(-1.5em);}
+  30% { fill: $color-6;transform: translateY(0em);}
+  100% { fill: $color-6;transform: translateY(0em);}
+}
+
+@keyframes circleRotate {
+  0% { fill: $color-3;transform: rotate(0deg);}
+  10% { fill: $color-5;transform: rotate(360deg);}
+  20% { fill: $color-5;transform: rotate(360deg);}
+  25% { fill: $color-5;transform: rotate(360deg);}
+  30% { fill: $color-3;transform: rotate(720deg);}
+  100% { fill: $color-3;transform: rotate(720deg);}
+}

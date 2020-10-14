@@ -1,0 +1,42 @@
+body {
+  font-family: $font-prime;
+  font-size: 14px;
+}
+
+h1 {
+  @include fluid-type(2em, 2.4em);
+  margin-bottom: $pad-lg;
+  font-weight: 100;
+  line-height: 1;
+}
+
+h2 {
+  @include fluid-type(1.8em, 2.2em);
+  font-weight: 200;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+h3 {
+  @include fluid-type(0.9em, 1em);
+  margin-bottom: $pad;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+p {
+  @include fluid-type(1em, 1.2em);
+  font-family: $font-secondary;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+b {
+  font-weight: 800;
+}
+
+.caption {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  line-height: 1;
+}
