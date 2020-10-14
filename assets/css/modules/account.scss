@@ -1,0 +1,13 @@
+.account {
+  &__link {
+    font-family: $font-prime;
+    font-weight: 500;
+    padding: $pad-sm $pad-xlg 0;
+    text-align: right;
+    img {
+      margin-right: $pad-xs;
+      max-width: 2.5em;
+      vertical-align: middle;
+    }
+  }
+}

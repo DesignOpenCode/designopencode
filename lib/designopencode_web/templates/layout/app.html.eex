@@ -9,7 +9,18 @@
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
   <body>
-    <main role="main" class="container">
+    <div class="container">
+      <div class="account__link">
+        <img src="<%= Routes.static_path(@conn, "/images/icon-account.svg") %>" alt="Account Image"/>
+        <%= if @current_user do %>
+          <h2>Logged in!</h2>
+        <% else %>
+          <%= link to: Routes.auth_path(@conn, :index, :github) do %>
+            Login with GitHub
+          <% end %>
+        <% end %>
+      </div>
+
       <%= if get_flash(@conn, :info) do %>
         <p class="alert alert-info" role="alert" data-test="flash_info"><%= get_flash(@conn, :info) %></p>
       <% end %>
@@ -17,15 +28,14 @@
         <p class="alert alert-danger" role="alert" data-test="flash_danger"><%= get_flash(@conn, :error) %></p>
       <% end %>
 
-      <%= @inner_content %>
-
-      <%= if @current_user do %>
-        <h2>Logged in!</h2>
-      <% else %>
-        <%= link to: Routes.auth_path(@conn, :index, :github) do %>
-          Login with GitHub
-        <% end %>
-      <% end %>
-    </main>
+      <main role="main">
+        <%= @inner_content %>
+      </main>
+    </div>
+    <footer>
+      <p>© 2020 designopencode</p>
+      <p class="u-center"><a href="#">home</a> | <a href="#">designers</a> | <a href="#">projects</a> | <a href="#">login</a></p>
+      <p class="u-right">powered by Gaslight</p>
+    </footer>
   </body>
 </html>

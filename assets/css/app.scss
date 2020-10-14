@@ -1,41 +1,22 @@
-/* This file is for your main application css. */
+//BASE
+@import
+"/base/mixins",
+"/base/variables",
+"/base/reset",
+"/base/type";
 
-/* Alerts and form errors */
-.alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
+//LAYOUT
+@import
+"/layout/base";
 
-.alert-info {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-}
+//MODULES
+@import
+"/modules/buttons",
+"/modules/cards",
+"/modules/logo",
+"/modules/account",
+"/modules/footer";
 
-.alert-warning {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-}
-
-.alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
-}
-
-.alert p {
-  margin-bottom: 0;
-}
-
-.alert:empty {
-  display: none;
-}
-
-.invalid-feedback {
-  color: #a94442;
-  display: block;
-  margin: -1rem 0 2rem;
-}
+//STATES
+@import
+"/states/utilities";

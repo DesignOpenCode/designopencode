@@ -1,0 +1,34 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin: 0;
+  height: 20em;
+  padding: $pad 13vw $pad;
+  box-sizing: border-box;
+//   background:
+//     linear-gradient(180deg, rgba($color-3 ,0) 20%, rgba($color-3,.1) 20%, rgba($color-3,.1) 40%, rgba($color-3,.2) 40%, rgba($color-3,.2) 60%, rgba($color-3,.4) 60%, rgba($color-3,.4) 80%, rgba($color-3,.5) 80%),
+//     linear-gradient(45deg, rgba($color-6,.2) 20%, rgba($color-6,.3) 20%, rgba($color-6,.3) 40%, rgba($color-6,.55) 40%, rgba($color-6,.55) 60%, rgba($color-6,.75) 60%, rgba($color-6,.85) 80%, rgba($color-6,1) 80%),
+//     linear-gradient(-45deg, rgba($color-11,0) 20%, rgba($color-11,.1) 20%, rgba($color-11,.1) 40%, rgba($color-11,.2) 40%, rgba($color-11,.2) 60%, rgba($color-11,.4) 60%, rgba($color-11,.4) 80%, rgba($color-11,.6) 80%),
+//     linear-gradient(90deg, rgba($color-10,0) 20%, rgba($color-10,.3) 20%, rgba($color-10,.3) 40%, rgba($color-10,.5) 40%, rgba($color-10,.5) 60%, rgba($color-10,.7) 60%, rgba($color-10,.7) 80%, rgba($color-10,.8) 80%),
+//     linear-gradient(-90deg, rgba($color-9,0) 20%, rgba($color-9,.4) 20%, rgba($color-9,.4) 40%, rgba($color-9,.5) 40%, rgba($color-9,.5) 60%, rgba($color-9,.6) 60%, rgba($color-9,.6) 80%, rgba($color-9,.8) 80%),
+//     linear-gradient(180deg, rgba($color-8,0) 20%, rgba($color-8,.4) 20%, rgba($color-8,.4) 40%, rgba($color-8,.6) 40%, rgba($color-8,.6) 60%, rgba($color-8,.8) 60%, rgba($color-8,.8) 80%, rgba($color-8,.9) 80%)
+// ;
+	background-color: $color-3;
+	background-size: 200% 200%;
+  color: $color-2;
+
+  p {
+    font-family: $font-prime;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  a {
+    color: $color-2;
+
+    &:hover {
+      color: $color-2;
+    }
+  }
+}

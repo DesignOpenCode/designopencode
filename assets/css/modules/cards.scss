@@ -1,0 +1,72 @@
+.card {
+  padding: $pad-sm;
+  box-sizing: border-box;
+  background-color: $color-3;
+  border-radius: 25px;
+  color: $color-1;
+  text-align: center;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $pad;
+    margin-bottom: $pad-lg;
+  }
+
+  &__type {
+    text-align: center;
+    width: object-fit;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    justify-content: center;
+    grid-gap: $pad-sm;
+
+    .type {
+      &__circle {
+        background-color: $color-6;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+      }
+
+      &__title {
+        letter-spacing: 3px;
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+    max-width: 8em;
+    margin: $pad auto;
+  }
+
+  &__title {
+    @include fluid-type(1.6em, 2em);
+    font-family: $font-prime;
+    margin-bottom: $pad-sm;
+  }
+
+  &--designer {
+    .type__circle{
+      background-color: $color-5;
+    }
+
+    .card__title {
+      color: $color-5;
+    }
+  }
+
+  &--project {
+    .type__circle{
+      background-color: $color-4;
+    }
+
+    .card__title {
+      color: $color-4;
+    }
+  }
+}
