@@ -19,10 +19,6 @@
             Login with GitHub
           <% end %>
         <% end %>
-<<<<<<< HEAD
-=======
-      </main>
->>>>>>> Add GitHub OAuth
       </div>
 
       <%= if get_flash(@conn, :info) do %>
