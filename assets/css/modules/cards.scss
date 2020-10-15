@@ -1,53 +1,70 @@
 .card {
-  padding: $pad-sm;
   box-sizing: border-box;
-  background-color: $color-3;
+  padding: $pad-sm;
+  transform: scale(1.0, 1.0);
   border-radius: 25px;
+  background-color: $color-3;
   color: $color-1;
   text-align: center;
+  transition: all 0.5s ease;
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-gap: $pad;
-    margin-bottom: $pad-lg;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 $pad-xlg $pad-lg;
+
+    @media screen and (min-width: $screen-mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $screen-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__type {
-    text-align: center;
-    width: object-fit;
+    grid-gap: $pad-sm;
     display: grid;
     grid-template-columns: repeat(2, max-content);
     align-items: center;
     justify-content: center;
-    grid-gap: $pad-sm;
+    width: object-fit;
+    text-align: center;
 
     .type {
       &__circle {
-        background-color: $color-6;
         width: 15px;
         height: 15px;
         border-radius: 50%;
+        background-color: $color-6;
       }
 
       &__title {
-        letter-spacing: 3px;
         margin-bottom: 0;
         font-weight: 600;
+        letter-spacing: 3px;
       }
     }
   }
 
   &__image {
-    border-radius: 50%;
     max-width: 8em;
     margin: $pad auto;
+    border-radius: 50%;
   }
 
   &__title {
     @include fluid-type(1.6em, 2em);
-    font-family: $font-prime;
     margin-bottom: $pad-sm;
+    font-family: $font-prime;
+  }
+
+  &:hover {
+    transform: scale(0.95, 0.95);
+    background-color: lighten($color-3, 10%);
+    cursor: pointer;
+    transition: all 0.5s ease;
   }
 
   &--designer {

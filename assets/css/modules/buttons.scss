@@ -3,10 +3,11 @@ a {
   border-bottom: solid 3px $color-5;
   color: $color-3;
   text-decoration: none;
-
+  transition: all 0.5s ease;
 
   &:hover {
-    border-bottom: solid 4px $color-6;
+    border-bottom: solid 3px $color-6;
     color: $color-3;
+    transition: all 0.5s ease;
   }
 }
