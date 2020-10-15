@@ -7,6 +7,7 @@ defmodule DesignopencodeWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug DesignopencodeWeb.Auth, repo: Designopencode.Repo
   end
 
   pipeline :api do
@@ -19,10 +20,13 @@ defmodule DesignopencodeWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", DesignopencodeWeb do
-  #   pipe_through :api
-  # end
+  scope "/auth", DesignopencodeWeb do
+    pipe_through(:browser)
+
+    get("/:provider", AuthController, :index)
+    get("/:provider/callback", AuthController, :callback)
+    delete("/logout", AuthController, :delete)
+  end
 
   # Enables LiveDashboard only for development
   #

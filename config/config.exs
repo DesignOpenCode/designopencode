@@ -26,6 +26,18 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# GitHub OAuth
+config :designopencode, Designopencode.OAuth.GitHub,
+  # client_id: System.get_env("GITHUB_CLIENT_ID"),
+  # client_secret: System.get_env("GITHUB_CLIENT_SECRET"),
+  # redirect_uri: System.get_env("GITHUB_REDIRECT_URI"),
+  client_id: System.get_env("9c366e910256fcec2b31"),
+  client_secret: System.get_env("091ecca4cb2b6bb931dbf5690de3dbe1b8a6b943"),
+  redirect_uri: System.get_env("https://8a328cb75717.ngrok.io/auth/github/callback"),
+  site: "https://api.github.com",
+  authorize_url: "https://github.com/login/oauth/authorize",
+  token_url: "https://github.com/login/oauth/access_token"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
