@@ -1,0 +1,36 @@
+.icon {
+  &--more {
+    margin: 0 auto;
+    max-width: 6rem;
+
+    .circle {
+      display: none;
+      fill: none;
+      stroke: $color-3;
+      stroke-width: 102;
+      stroke-miterlimit: 10;
+    }
+
+    .open-hand {
+      fill: $color-3;
+    }
+
+    .arrow {
+      fill: $color-6;
+      transform: translateY(0);
+      animation: arrowDown 2s ease-out infinite;
+    }
+
+    &:hover {
+      .arrow, .open-hand {
+        fill: $color-5;
+      }
+    }
+  }
+}
+
+@keyframes arrowDown {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-2.5em);}
+  100% { transform: translateY(0em);}
+}
