@@ -84,37 +84,48 @@
     <h2>Connecting Design & Open Source Projects</h2>
     <p class="u-push-top--sm">Design Open Code is a platform where front-end desigers and open source project maintainers<br /> can connect through mutal intrest in working togeather.</p>
   </div>
-  <div class="list__filters u-push-top--lg">
-    <div class="input__search">
-      <input type="text" placeholder="Search..">
-      <button type="submit">icon</button>
+  <div class="u-push-top--sm">
+    <div class="u-center">
     </div>
-    <label class="checkbox__container">Designers
-      <input class="input__checkbox" type="checkbox" checked="checked">
-      <span class="checkbox__checkmark"></span>
-    </label>
-    <label class="checkbox__container">Projects
-      <input class="input__checkbox" type="checkbox" checked="checked">
-      <span class="checkbox__checkmark"></span>
-    </label>
-    <div class="input__select">
-      <select>
-        <option value="0">Sort By:</option>
-        <option value="2">Newest</option>
-        <option value="2">DOC Experience</option>
-      </select>
-    </div>
-    <div class="input__select">
-      <select>
-        <option value="0">Skillsets:</option>
-        <option value="1">HTML</option>
-        <option value="1">CSS</option>
-        <option value="1">SCSS</option>
-        <option value="2">React JS</option>
-        <option value="2">Vue JS</option>
-        <option value="2">Accessibility</option>
-      </select>
-    </div>
+    <form class="list__filters">
+      <fieldset class="list__filters">
+        <label class="checkbox__container">Designers
+          <input class="input__checkbox" type="checkbox" checked="checked">
+          <span class="checkbox__checkmark"></span>
+        </label>
+        <label class="checkbox__container">Projects
+          <input class="input__checkbox" type="checkbox" checked="checked">
+          <span class="checkbox__checkmark"></span>
+        </label>
+      </fieldset>
+      <fieldset class="list__search">
+        <div class="input__search">
+          <label>Search</label>
+          <input type="text" placeholder="name, project title, etc.">
+        </div>
+        <div class="input__select">
+          <label>Sort by</label>
+          <select>
+            <option value="2">Newest</option>
+            <option value="2">DOC Experience</option>
+          </select>
+        </div>
+        <div class="input__select">
+          <label>Filter Skillset</label>
+          <select>
+            <option value="1">All Skills</option>
+            <option value="1">HTML</option>
+            <option value="1">CSS</option>
+            <option value="1">SCSS</option>
+            <option value="2">React JS</option>
+            <option value="2">Vue JS</option>
+            <option value="1">UX</option>
+            <option value="1">UI</option>
+            <option value="2">Accessibility</option>
+          </select>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <div class="card__grid u-push-top">
     <div class="card card--designer">
