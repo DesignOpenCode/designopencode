@@ -22,7 +22,9 @@
     }
 
     &:hover {
-      .arrow, .open-hand {
+      cursor: pointer;
+
+      .open-hand {
         fill: $color-5;
       }
     }
