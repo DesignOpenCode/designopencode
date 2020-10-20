@@ -130,9 +130,9 @@ label {
 //FIELDSETS
 fieldset {
   &.list__filters {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
 
     label {
       margin: $pad-sm;
@@ -140,9 +140,12 @@ fieldset {
   }
 
   &.list__search {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+    @media (min-width: $screen-tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
 
     div {
       margin: $pad-sm $pad-sm 0;
